@@ -63,11 +63,11 @@ class MainViewController: UIViewController, UIViewControllerTransitioningDelegat
         permissions.permissionLabelColor = UIColor.textColor()
         
         tunerView = TunerView(frame: view.frame)
-        tunerView?.actionButton.addTarget(self, action: "didTouchUpInsideButton:", forControlEvents: .TouchUpInside)
+        tunerView?.actionButton.addTarget(self, action: #selector(MainViewController.didTouchUpInsideButton(_:)), forControlEvents: .TouchUpInside)
         view.addSubview(tunerView!)
         
         infoButton = BFPaperButton(frame: CGRectMake(CGRectGetWidth(view.bounds) - 54, 30, 44, 44), raised: true)
-        infoButton?.addTarget(self, action: "didTouchUpInsideButton:", forControlEvents: .TouchUpInside)
+        infoButton?.addTarget(self, action: #selector(MainViewController.didTouchUpInsideButton(_:)), forControlEvents: .TouchUpInside)
         infoButton?.cornerRadius = CGRectGetWidth(infoButton!.bounds) / 2.0
         infoButton?.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         infoButton?.backgroundColor = UIColor.partitaDarkBlueColor()

@@ -243,7 +243,7 @@ class InfoViewController: UIViewController {
         view.addSubview(navigationViewController.view)
         
         closeButton.frame = CGRect(x: CGRectGetWidth(view.bounds) - 54, y: 30, width: 44, height: 44)
-        closeButton.addTarget(self, action: "didTouchUpInsideButton:", forControlEvents: .TouchUpInside)
+        closeButton.addTarget(self, action: #selector(InfoViewController.didTouchUpInsideButton(_:)), forControlEvents: .TouchUpInside)
         closeButton.cornerRadius = CGRectGetWidth(closeButton.bounds) / 2.0
         closeButton.setTitleColor(UIColor.textColor(), forState: .Normal)
         closeButton.backgroundColor = UIColor.whiteColor()
